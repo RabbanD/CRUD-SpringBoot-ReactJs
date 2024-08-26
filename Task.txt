@@ -1,0 +1,2 @@
+Task - CRUD with react and springboot connected. Data receiving from MySQL.
+➡️Did with creating new entity.
