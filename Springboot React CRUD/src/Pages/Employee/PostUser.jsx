@@ -29,7 +29,7 @@ const PostUser = () => {
         console.log(formData)
 
         try {
-            const response = await fetch("http://localhost:8080/api/employee",{
+            const response = await fetch("http://mysql.railway.internal:8080/api/employee",{
                 method: "POST",
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(formData)
