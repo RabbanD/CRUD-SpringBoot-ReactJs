@@ -14,7 +14,7 @@ const Dashboard = () => {
     useEffect(()=>{
         const fetchEmployees = async () => {
             try {
-                const response = await fetch("http://spring-backend-production-dd4b.up.railway.app:8080/api/employees");
+                const response = await fetch("http://localhost:8080/api/employees");
                 const data = await response.json();
 
                 setEmployees(data);
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
     const handleDelete = async(employeeId) =>{
         try {
-            const response = await fetch(`http://spring-backend-production-dd4b.up.railway.app:8080/api/employee/${employeeId}`,{
+            const response = await fetch(`http://localhost:8080/api/employee/${employeeId}`,{
                 method: "DELETE",
             });
 
