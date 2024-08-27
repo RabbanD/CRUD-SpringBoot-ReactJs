@@ -27,7 +27,7 @@ const UpdateUser = () => {
     useEffect(()=>{
         const fetchEmployee = async ()=>{
             try {
-                const response = await fetch(`https://mysql.railway.internal:8080/api/employee/${id}`);
+                const response = await fetch(`https://mysql.railway.internal:3306/api/employee/${id}`);
                 const data = await response.json();
                 setFormData(data);
             } catch (error) {
