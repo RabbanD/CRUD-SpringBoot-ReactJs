@@ -41,7 +41,7 @@ const UpdateUser = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://mysql.railway.internal:8080/api/employee/${id}`,{
+            const response = await fetch(`http://mysql.railway.internal:3306/api/employee/${id}`,{
                 method:"PATCH",
                 headers:{
                     "Content-Type":"application/json",
