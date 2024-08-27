@@ -27,7 +27,7 @@ const UpdateUser = () => {
     useEffect(()=>{
         const fetchEmployee = async ()=>{
             try {
-                const response = await fetch(`https://mysql.railway.internal:3306`);
+                const response = await fetch(`http://spring-backend.railway.internal:8080/api/employee/${id}`);
                 const data = await response.json();
                 setFormData(data);
             } catch (error) {
@@ -41,7 +41,7 @@ const UpdateUser = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch(`https://mysql.railway.internal:3306`,{
+            const response = await fetch(`http://spring-backend.railway.internal:8080/api/employee/${id}`,{
                 method:"PATCH",
                 headers:{
                     "Content-Type":"application/json",
