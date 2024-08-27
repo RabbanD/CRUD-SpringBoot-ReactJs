@@ -14,7 +14,7 @@ const Dashboard = () => {
     useEffect(()=>{
         const fetchEmployees = async () => {
             try {
-                const response = await fetch("https://mysql.railway.internal:3306/api/employees");
+                const response = await fetch("https://mysql.railway.internal:3306");
                 const data = await response.json();
 
                 setEmployees(data);
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
     const handleDelete = async(employeeId) =>{
         try {
-            const response = await fetch(`https://mysql.railway.internal:3306/api/employee/${employeeId}`,{
+            const response = await fetch(`https://mysql.railway.internal:3306`,{
                 method: "DELETE",
             });
 
