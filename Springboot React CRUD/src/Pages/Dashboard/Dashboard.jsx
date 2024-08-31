@@ -14,7 +14,7 @@ const Dashboard = () => {
     useEffect(()=>{
         const fetchEmployees = async () => {
             try {
-                const response = await fetch("http://spring-backend-production-dd4b.up.railway.app/api/employees");
+                const response = await fetch("https://spring-backend-production-dd4b.up.railway.app/api/employees");
                 const data = await response.json();
 
                 setEmployees(data);
