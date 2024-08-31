@@ -29,7 +29,7 @@ const Dashboard = () => {
 
     const handleDelete = async(employeeId) =>{
         try {
-            const response = await fetch(`http://spring-backend-production-dd4b.up.railway.app/api/employee/${employeeId}`,{
+            const response = await fetch(`https://spring-backend-production-dd4b.up.railway.app/api/employee/${employeeId}`,{
                 method: "DELETE",
             });
 
